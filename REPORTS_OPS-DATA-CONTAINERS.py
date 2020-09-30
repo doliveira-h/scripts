@@ -55,7 +55,7 @@ def main():
         
         #login on regions  
         for regions in openshift_regions.split(','):
-            host = 'https://api.{0}.paas.gsnetcloud.corp:8443'.format(regions)
+            host = 'https://api.{0}.openshift.domain:8443'.format(regions)
             userpass = '{0}:{1}'.format(openshift_username, openshift_password)
             token = oc.get_login_token(host, userpass.encode())
             #list all projects
